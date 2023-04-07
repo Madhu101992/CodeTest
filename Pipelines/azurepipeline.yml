@@ -1,0 +1,30 @@
+# -- Master pipline for WPP Cloud Studio
+
+trigger: none
+pr: none
+
+name: Codetest - ${{ parameters.Environment }}_$(date:yyyyMMdd)$(rev:.r)
+
+#-- Parameters
+parameters:
+- name: Environment
+  type: string
+  values:
+  - test
+  - prod
+
+- name: TerraformVersion
+  type: string
+  default: '1.4.4'
+
+#-- Varibales
+variables:
+- template: ./Env_${{ parameters.Environment }}.yml
+- group: codetest-${{ parameters.Environment }}
+
+stages:
+- template: ./terraform-stages.yml
+  parameters:
+    Environment: ${{ parameters.Environment }}
+    TerraformDirectory: ${{ variables.TerraformDirectory }}
+    TerraformVersion: ${{ parameters.TerraformVersion }}
