@@ -1,0 +1,14 @@
+variables:
+# COMMON ENV. VARIABLES
+- name: serviceConnection
+  value: 'codetest-sc'
+- name: backend-rg
+  value: 'rg-terraformstate-01'
+- name: backend-sa
+  value: 'saterraformstate01'
+- name: backend-container
+  value: 'terraform'
+- name: backend-key
+  value: 'terraform.tfstate'
+- name: TerraformDirectory
+  value: 'InfraDeployment'
