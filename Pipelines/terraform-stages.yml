@@ -10,12 +10,13 @@ parameters:
   - name: TerraformVersion
     type: string
   - name: commandOptions
+    type: string
     default: '-out=$(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}/terraform.tfplan -detailed-exitcode'
 
 
 # Image to use for the pipeline stages and jobs
-pool:
-  vmImage: ubuntu-latest
+# pool:
+#   vmImage: ubuntu-latest
 
 stages:
 
@@ -24,6 +25,8 @@ stages:
   jobs:
   - job: "runCheckov"
     displayName: "Checkov > Pull, run and publish results of Checkov scan"
+    pool:
+      vmImage: ubuntu-latest
     steps:
 
     - task: Bash@3
