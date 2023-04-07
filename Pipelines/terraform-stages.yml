@@ -9,10 +9,6 @@ parameters:
     type: string
   - name: TerraformVersion
     type: string
-  - name: commandOptions
-    type: string
-    default: '-out=$(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}/terraform.tfplan -detailed-exitcode'
-
 
 # Image to use for the pipeline stages and jobs
 # pool:
@@ -103,7 +99,7 @@ stages:
         workingDirectory: $(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}
         publishPlanResults: 'CodeTest - Results'
         environmentServiceName: $(serviceConnection)
-        commandOptions: ${{ parameters.commandOptions }}
+        commandOptions: '-out=$(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}/terraform.tfplan -detailed-exitcode'
 
     # Terraform Plan
 
@@ -184,7 +180,7 @@ stages:
               workingDirectory: $(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}
               publishPlanResults: 'CodeTest - Results'
               environmentServiceName: $(serviceConnection)
-              commandOptions: ${{ parameters.commandOptions }}
+              commandOptions: '-out=$(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}/terraform.tfplan -detailed-exitcode'
 
           - task: TerraformCLI@0
             displayName: 'Terraform : apply'
