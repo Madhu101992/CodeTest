@@ -73,10 +73,9 @@ stages:
 
     # Terraform init
 
-    - task: TerraformV2@2
+    - task: TerraformCLI@0
       displayName: 'Terraform : init'
       inputs:
-        provider: 'azurerm'
         command: init
         backendType: azurerm
         workingDirectory: $(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}
@@ -86,11 +85,10 @@ stages:
         backendAzureRmContainerName: $(backend-container)
         backendAzureRmKey: $(backend-key)
 
-    - task: TerraformV2@2
+    - task: TerraformCLI@0
       displayName: 'Terraform : validate'
       inputs:
-        provider: 'azurerm'
-        command: 'validate'
+        command: validate
 
     - task: TerraformCLI@0
       displayName: 'Terraform : plan'
@@ -160,10 +158,9 @@ stages:
 
           # Terraform init
 
-          - task: TerraformV2@2
+          - task: TerraformCLI@0
             displayName: 'Terraform : init'
             inputs:
-              provider: 'azurerm'
               command: init
               backendType: azurerm
               workingDirectory: $(System.DefaultWorkingDirectory)/${{ parameters.TerraformDirectory }}
