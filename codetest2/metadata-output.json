@@ -1,0 +1,56 @@
+{
+    "compute": {
+        "azEnvironment": "AzurePublicCloud",
+        "customData": "",
+        "evictionPolicy": "",
+        "isHostCompatibilityLayerVm": "false",
+        "licenseType": "",
+        "location": "eastus",
+        "name": "mydemovm",
+        "offer": "WindowsServer",
+        "osProfile": {
+            "adminUsername": "adminuser",
+            "computerName": "mydemovm",
+            "disablePasswordAuthentication": ""
+        },
+        "osType": "Windows",
+        "placementGroupId": "",
+        "plan": {
+            "name": "",
+            "product": "",
+            "publisher": ""
+        },
+        "platformFaultDomain": "0",
+        "platformUpdateDomain": "0",
+        "priority": "",
+        "provider": "Microsoft.Compute",
+        "publicKeys": [],
+        "publisher": "MicrosoftWindowsServer",
+        "resourceGroupName": "threatmodel",
+        "resourceId":  "/subscriptions/28b1897c-e654-413e-86db-a56ed8aab780/resourceGroups/threatmodel/providers/Microsoft.Compute/virtualMachines/mydemovm",
+        "securityProfile": {
+            "secureBootEnabled": "false",
+            "virtualTpmEnabled": "false"
+        },
+        "sku": "2016-datacenter-gensecond",
+        "storageProfile": {
+            "dataDisks": "",
+            "imageReference":  "@{id=; offer=WindowsServer; publisher=MicrosoftWindowsServer; sku=2016-datacenter-gensecond; version=latest}",
+            "osDisk":  "@{caching=ReadWrite; createOption=FromImage; diffDiskSettings=; diskSizeGB=127; encryptionSettings=; image=; managedDisk=; name=mydemovm_OsDisk_1_9a97463f083f486aaef2f88cc0c7be30; osType=Windows;vhd=; writeAcceleratorEnabled=false}","resourceDisk": "@{size=32768}"
+},
+"subscriptionId": "28b1897c-e654-413e-86db-a56ed8aab780",
+"tags": "",
+"tagsList": [],
+"userData": "",
+"version": "14393.5786.230310",
+"vmId": "e01bc752-0d46-4641-aeb5-e13d4d87cf43",
+"vmScaleSetName": "",
+"vmSize": "Standard_D4s_v3",
+"zone": ""
+},
+"network": {
+"interface": [
+    "@{ipv4=; ipv6=; macAddress=002248348A15}"
+]
+}
+}

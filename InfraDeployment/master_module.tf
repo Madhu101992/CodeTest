@@ -1,10 +1,6 @@
 
 # - Master file : all the modules for core infrastructure are called here
 
-  terraform {
-    required_version = "~> 1.0.0"
-    backend "azurerm" {}
-  }
 # - Calling ResourceGroup module to create resource group
   module "resource_group" {
     source   = "../modules/ResourceGroup"
@@ -73,7 +69,7 @@
 # - Calling App Service module to create an Azure App Service
 
   module "app_service" {
-    source = "../modules/App Service"
+    source = "../modules/WebApp"
     name                         = "${var.project_code}portal" //codetestportal
     resource_group_name          = module.resource_group.name
     location                     = module.resource_group.location

@@ -1,6 +1,6 @@
 #Set the terraform required version
 terraform {
-  required_version = "~> 1.0.0"
+  required_version = "1.4.4"
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
@@ -10,7 +10,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "rg-terraformstate-01"
-    storage_account_name = "saterraformstate01"
+    storage_account_name = "saeusterraformstate01"
     container_name       = "tfstate"
     key                  = "test.terraform.tfstate"
   }
