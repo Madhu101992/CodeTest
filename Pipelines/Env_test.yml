@@ -5,7 +5,7 @@ variables:
 - name: backend-rg
   value: 'rg-terraformstate-01'
 - name: backend-sa
-  value: 'saterraformstate01'
+  value: 'saeusterraformstate01'
 - name: backend-container
   value: 'terraform'
 - name: backend-key

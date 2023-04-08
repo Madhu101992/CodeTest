@@ -11,8 +11,8 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "rg-terraformstate-01"
     storage_account_name = "saeusterraformstate01"
-    container_name       = "tfstate"
-    key                  = "test.terraform.tfstate"
+    container_name       = "terraform"
+    key                  = "terraform.tfstate"
   }
 }
 

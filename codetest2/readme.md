@@ -9,4 +9,4 @@ I have also attached the output file - metadata-output.json.
 
 It exposes the important metadata for the VM instance, including compute, network, and storage.
 
-# To retrive a particular data key need to use get-metadata-key.ps1 and the output is in text format in file metadata-datakey-output.txt
+## To retrive a particular data key need to use get-metadata-key.ps1 and the output is in text format in file metadata-datakey-output.txt

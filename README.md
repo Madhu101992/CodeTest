@@ -8,11 +8,11 @@ Here I am creating a 3-tier application architecture using WebApp, Function App 
 4. Access to Azure SQL is restricted via service endpoint.
 
 
-# Modules Folder contains modules which have the terraform resource blocks for the resources to be provisioned.
+Modules Folder contains modules which have the terraform resource blocks for the resources to be provisioned.
 
-# InfraDeployment Folder contains master_module.tf file that will call the modules in terraform plan and apply stage.
+InfraDeployment Folder contains master_module.tf file that will call the modules in terraform plan and apply stage.
 
-# Pipelines contains the YAML pipelines for automating the entire deployment.
+Pipelines contains the YAML pipelines for automating the entire deployment.
 
 
 
