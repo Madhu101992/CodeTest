@@ -1,5 +1,5 @@
 #Returns the output of network resource
-output "network_name" {
+output "name" {
   value = azurerm_virtual_network.vnet.name
   description = "Name of the Virtual network"
 }

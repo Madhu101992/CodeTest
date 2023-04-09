@@ -5,13 +5,15 @@ tags = {
 
 location = "eastus"
 
+Environment = "test"
+
 locationshortprefix = "eus"
 
 project_code        = "codetest"
 
 order = "01"
 
-account_tier = "Standard"
+account_tier = "standard"
 
 account_kind = "StorageV2"
 

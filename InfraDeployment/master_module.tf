@@ -30,6 +30,8 @@
     name                            = "kv-${var.project_code}-${var.locationshortprefix}-${var.Environment}-${var.order}"  //kv-codetest-eus-test-01
     resource_group_name             = module.resource_group.name
     location                        = module.resource_group.location
+    tenant_id                       = data.azurerm_client_config.current.tenant_id
+    object_id                       = data.azurerm_client_config.current.object_id
   }
 
 # - Calling FunctionApp module to create an Azure Function App
@@ -80,7 +82,7 @@
 
 # - Calling Networking Module to create Network components
 
-  module "virtual_netowrk" {
+  module "virtual_network" {
     source = "../modules/Networking"
     name                         = "vnet-${var.project_code}-${var.locationshortprefix}-${var.Environment}-${var.order}" //vnet-codetest-eus-test-01
     resource_group_name          = module.resource_group.name
@@ -88,5 +90,4 @@
     address_space                = var.address_space
     websubnetcidr                = var.websubnetcidr
     appsubnetcidr                = var.appsubnetcidr
-    depends_on                   = [module.virtual_network] 
   }

@@ -23,7 +23,7 @@ resource "azurerm_key_vault_access_policy" "kvaccesspolicy1" {
   secret_permissions = [
       "get", "list" , "set", "delete", "recover", "backup", "restore", "purge"
     ]
-  dedepends_on = [
+  depends_on = [
     azurerm_key_vault.kv
   ]  
 }

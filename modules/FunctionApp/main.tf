@@ -58,7 +58,7 @@ resource "azurerm_function_app" "functionapp" {
     }
   }
   depends_on = [
-    azurerm_app_service_plan.asp2, azurerm_storage_account.sa
+    azurerm_app_service_plan.asp2
   ]
 }
 

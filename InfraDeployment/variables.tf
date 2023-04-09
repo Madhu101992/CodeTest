@@ -21,6 +21,10 @@
     
   }
 
+  variable "Environment" {
+    
+  }
+
   variable "account_tier" {
     description = "storage account tier"
     type = string
